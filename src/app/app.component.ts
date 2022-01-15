@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titulo:string = 'Contador App';
+  //Si se coloca undefiend no se visualiza el numero
+  numero:number = 0;
 }
