@@ -11,14 +11,14 @@
     <div class="field has-addons">
       <div class="control">
         <!-- No se recomienda colocar mucha logica en el template -->
-        <button (click)="numero = numero - 1;"class="button is-danger">-1</button>
+        <button (click)="restar();"class="button is-danger">-1</button>
       </div>
       <div class="control">
         <input class="input" type="text" placeholder="Find a repository" value={{numero}} readonly>
       </div>
       <div class="control">
         <!-- (click son eventos) -->
-        <button (click)="numero = numero + 1;" class="button is-success">+1</button>
+        <button (click)="sumar();" class="button is-success">+1</button>
       </div>
     </div>
   </body>

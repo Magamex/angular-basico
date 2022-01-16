@@ -11,4 +11,12 @@ export class AppComponent {
   titulo:string = 'Contador App';
   //Si se coloca undefiend no se visualiza el numero
   numero:number = 0;
+
+  sumar(){
+    this.numero += 1;
+  }
+
+  restar(){
+    this.numero -= 1;
+  }
 }
