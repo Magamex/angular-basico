@@ -7,4 +7,14 @@ import { Component } from "@angular/core";
 
 export class ListadoComponent{
 
+  heroes: string[] = ["Deadpool", "Daredevil", "Superman", "Batman"];
+
+  heroeBorrado: string = '';
+
+
+  borrarHeroe(){
+    //Si no se coloca el operador OR te devuelve un error porque puede devolver un string o un undefined
+    this.heroeBorrado = this.heroes.pop() || '';
+  }
+
 }
