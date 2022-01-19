@@ -1,0 +1,28 @@
+<h1 class="title">Dragon Ball Z</h1>
+<hr>
+
+<div class="columns">
+  <div class="column has-text-centered">
+    <app-personajes></app-personajes>
+
+  </div>
+
+  <div class="column has-text-centered">
+    <h3 class="subtitle">Agregar</h3>
+    <hr>
+    <!-- Agregar ngSubmit para que no se refresque la pagina -->
+    <form (ngSubmit)="agregarPersonaje()">
+      <div class="field">
+        <div class="control">
+          <input class="input" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input class="input" type="number" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder">
+        </div>
+      </div>
+      <button type="submit" class="button is-primary">Agregar</button>
+    </form>
+  </div>
+</div>
