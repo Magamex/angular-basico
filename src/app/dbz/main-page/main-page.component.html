@@ -10,21 +10,10 @@
   </div>
 
   <div class="column has-text-centered">
-    <h3 class="subtitle">Agregar</h3>
-    <hr>
-    <!-- Agregar ngSubmit para que no se refresque la pagina -->
-    <form (ngSubmit)="agregarPersonaje()">
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre">
-        </div>
-      </div>
-      <div class="field">
-        <div class="control">
-          <input class="input" type="number" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder">
-        </div>
-      </div>
-      <button type="submit" class="button is-primary">Agregar</button>
-    </form>
+    <!-- onNuevoPersonaje aparece entre parentesis ya que lo usamos para recibir el evento y mandarlo como arumento a la funcion -->
+    <app-agregar
+      [nuevo]='nuevo'
+      (onNuevoPersonaje)="agregarNuevoPersonaje($event)"
+      ></app-agregar>
   </div>
 </div>
