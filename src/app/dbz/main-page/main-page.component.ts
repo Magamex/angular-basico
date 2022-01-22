@@ -13,20 +13,19 @@ export class MainPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  personajes: Personaje[] = [
-    {nombre: 'Goku', poder: 9000},
-    {nombre: 'Vegeta', poder: 8000},
-  ];
-
   nuevo: Personaje = {
     nombre: '',
     poder: 0
   }
 
-  agregarNuevoPersonaje(argumento:Personaje){
-    this.personajes.push(argumento);
-  }
+  // get personajes(): Personaje[]{
+  //   return this.DbzService.personajes;
+  // }
+
+  // agregarNuevoPersonaje(argumento:Personaje){
+  //   this.personajes.push(argumento);
+  // }
   //Inyeccion de dependencia
-  constructor(private DbzService: DbzService) { }
+  constructor() {}
 
 }

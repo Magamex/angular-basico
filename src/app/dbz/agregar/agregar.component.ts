@@ -10,7 +10,6 @@ import { DbzService } from '../services/dbz.service';
 })
 export class AgregarComponent implements OnInit {
 
-  constructor(private DbzService: DbzService) { }
 
   ngOnInit(): void {
   }
@@ -21,17 +20,20 @@ export class AgregarComponent implements OnInit {
   }
 
   //Output sirve para emitir eventos
-  @Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter();
+  // @Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter();
+  constructor(private DbzService: DbzService) { }
 
   agregarPersonaje() {
     if(this.nuevo.nombre.trim().length === 0){return;}
 
-    this.onNuevoPersonaje.emit(this.nuevo);
+    // this.onNuevoPersonaje.emit(this.nuevo);
+    this.DbzService.add(this.nuevo);
 
     this.nuevo = {
       nombre: '',
       poder: 0
     }
   }
+
 
 }

@@ -4,16 +4,12 @@
 <div class="columns">
   <div class="column has-text-centered">
     <!-- El que esta entre corchetes es el personajes de personajes.component.ts -->
-    <app-personajes [data]='personajes'>
-
+    <app-personajes>
     </app-personajes>
   </div>
 
   <div class="column has-text-centered">
     <!-- onNuevoPersonaje aparece entre parentesis ya que lo usamos para recibir el evento y mandarlo como arumento a la funcion -->
-    <app-agregar
-      [nuevo]='nuevo'
-      (onNuevoPersonaje)="agregarNuevoPersonaje($event)"
-      ></app-agregar>
+    <app-agregar [nuevo]='nuevo'></app-agregar>
   </div>
 </div>
